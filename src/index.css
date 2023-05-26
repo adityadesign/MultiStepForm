@@ -1,0 +1,414 @@
+*{
+  box-sizing: border-box;
+}
+
+body{
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 92vh;
+  width: 100vw;
+  max-width: 400px;
+  min-width: 320px;
+  margin: 0 auto;
+  background-color: #e9f6f6;
+}
+
+.background{
+  background-image: url(assets/images/bg-sidebar-mobile.svg);
+  background-size: cover; 
+  height: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding-top: 2rem;
+}
+
+.stepDetails{
+  display: none;
+}
+@media(min-width:375px){
+  .hero{
+    flex-direction: row;
+    margin: 0;
+    height: 100vh;
+    padding: 1rem;
+    min-width: 100vw;
+    background-color: #FFFFFF;
+  }
+  .background{
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    border-radius: 10px;
+    background-position: center bottom;
+    height: 100%;
+    width: 30vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 0 0 4rem;
+    gap: 3rem;
+  }
+  .footer{
+    display: none;
+  }
+  .steps{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stepDetails{
+    display: flex;
+    flex-direction: column;
+  }
+  .stepText{
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    opacity: 0.5;
+  }
+  .stepInfo{
+    font-weight: 600;
+    color: #f3f3f3;
+    font-size: 1.1rem;
+  }
+  #form{
+    position: static;
+    margin: 3rem 0 0 0;
+    min-width: 60vw;
+    padding-right: 20%;
+  }
+  button{
+    align-self: flex-end;
+  }
+  label, .plan{
+    margin: 0.6rem 0;
+  }
+  .thankyou{
+    width: 30vw;
+    padding-top: 5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  .thankyou>h1{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+ #p2{
+    margin: 0.5rem;
+    text-align: center;
+  }
+}
+
+li{
+  border: 1px solid #FFFFFF;
+  padding: 10px 15px;
+  border-radius: 50%;
+  color: #FFFFFF;
+  list-style-type: none;
+}
+
+.active{
+  background-color: #d3fafa;
+  color: #1D267D;
+}
+
+.form{
+  position: absolute;
+  max-width: 400px;
+  width: 350px;
+  margin: 100px auto 0;
+  right: 0;
+  left: 0;
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  padding: 1.2rem 1.2rem 1.6rem;
+  display: flex;
+  flex-direction: column;
+}
+.form h1{
+  color: #1D267D;
+  margin: 5px 0;
+}
+
+.form p, .form2 p{
+  color: rgb(117, 115, 115);
+  font-size: 1rem;
+  margin-top: 5px;
+}
+
+.form1, .form2, .form3, .form4{
+  display: flex;
+  flex-direction: column;
+}
+
+.label{
+  color: #1D267D;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+.inputText{
+  width: 100%;
+  padding: 10px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.footer{
+  padding: 30px 30px 0;
+  height: 8vh;
+  background-color: #FFFFFF;
+}
+.back{
+  color: rgb(117, 115, 115);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.back:hover{
+  color: rgb(73, 72, 72);
+}
+button{
+  background-color: #1D267D;
+  color: #FFFFFF;
+  font-weight: 600;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover{
+  background-color: #3546de;
+}
+
+.plan{
+  display: flex;
+  border: 1px solid rgb(181, 175, 175);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  gap: 1rem;
+  padding: 12px;
+  cursor: pointer;
+}
+
+.planHead, .addOnsLabel{
+  margin: 0;
+  color: #1D267D;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.planDetails p{
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.plan:hover, .addOns:hover{
+  background-color: #f1ffff;
+  border-color: #1D267D;
+}
+.planClicked{
+  background-color: #f1ffff;
+  border-color: #1D267D;
+}
+#freeMonths{
+  color: #1D267D;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+.selected{
+  background-color: #e7fdfd;
+  border-color: #1D267D;
+}
+.selectSwitch{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 10px 0 15px;
+  background-color: rgb(246, 238, 238);
+  padding: 10px;
+  border-radius: 10px;
+  color: #1D267D;
+}
+.selectSwitch span{
+  font-weight: 500;
+  font-size: 0.93rem;
+}
+
+/* Switch button */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 22px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+input:checked + .slider {
+  background-color: #1D267D;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #1D267D;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(18px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+.addOns{
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(181, 175, 175);
+  border-radius: 10px;
+  margin-bottom: 15px;
+  padding: 14px;
+  cursor: pointer;
+}
+
+input[type=checkbox]{
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+}
+
+#addOnsDesc{
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+}
+
+.addOnsCost{
+  display: flex;
+  margin-left: auto;
+  color: rgb(117, 115, 115);
+}
+
+.payment{
+  background-color: rgba(211, 235, 241, 0.337);
+  border-radius: 10px;
+  padding: 15px 15px 0;
+  margin-bottom: 10px;
+}
+
+.planPayment{
+  display: flex;
+  align-items: center;
+}
+
+.planPaymentDesc{
+  display: flex;
+  flex-direction: column;
+}
+
+.planPaymentDesc>h3{
+  font-size: 1rem;
+  color: #1D267D;
+  margin: 0 0 5px 0;
+}
+
+.planPaymentDesc p{
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  color: rgb(117, 115, 115);
+}
+
+.planPayment span, .totalPayment span{
+  color: #1D267D;
+  margin-left: auto;
+  font-weight: 600;
+}
+
+.addOnsPayment{
+  display: flex;
+  margin: 20px 0;
+}
+
+.addOnsPayment p, .totalPayment p{
+  margin: 0;
+  font-size: 1rem;
+}
+
+.addOnsPayment span{
+  margin-left: auto;
+  color: #1D267D;
+}
+
+hr{
+  margin: 0;
+}
+
+.totalPayment{
+  display: flex;
+  margin: 15px 15px 25px;
+}
+
+.thankyou{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 330px;
+  justify-content: center;
+}
+
+.thankyou img{
+  height: 60px;
+}
+
+.thankyou h1{
+  margin: 20px 0 10px;
+}
+
+.thankyou p{
+  margin: 0;
+  line-height: 1.5;
+}
