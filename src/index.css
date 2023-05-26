@@ -34,76 +34,6 @@ body{
 .stepDetails{
   display: none;
 }
-@media(min-width:375px){
-  .hero{
-    flex-direction: row;
-    margin: 0;
-    height: 100vh;
-    padding: 1rem;
-    min-width: 100vw;
-    background-color: #FFFFFF;
-  }
-  .background{
-    background-image: url(assets/images/bg-sidebar-desktop.svg);
-    border-radius: 10px;
-    background-position: center bottom;
-    height: 100%;
-    width: 30vw;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 2rem 0 0 4rem;
-    gap: 3rem;
-  }
-  .footer{
-    display: none;
-  }
-  .steps{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-  }
-  .stepDetails{
-    display: flex;
-    flex-direction: column;
-  }
-  .stepText{
-    color: #FFFFFF;
-    font-size: 0.9rem;
-    opacity: 0.5;
-  }
-  .stepInfo{
-    font-weight: 600;
-    color: #f3f3f3;
-    font-size: 1.1rem;
-  }
-  #form{
-    position: static;
-    margin: 3rem 0 0 0;
-    min-width: 60vw;
-    padding-right: 20%;
-  }
-  button{
-    align-self: flex-end;
-  }
-  label, .plan{
-    margin: 0.6rem 0;
-  }
-  .thankyou{
-    width: 30vw;
-    padding-top: 5rem;
-    justify-self: center;
-    align-self: center;
-  }
-  .thankyou>h1{
-    font-size: 3rem;
-    padding-bottom: 2rem;
-  }
- #p2{
-    margin: 0.5rem;
-    text-align: center;
-  }
-}
-
 li{
   border: 1px solid #FFFFFF;
   padding: 10px 15px;
@@ -411,4 +341,75 @@ hr{
 .thankyou p{
   margin: 0;
   line-height: 1.5;
+}
+
+@media(min-width:400px){
+  .hero{
+    flex-direction: row;
+    margin: 0;
+    height: 100vh;
+    padding: 1rem;
+    min-width: 100vw;
+    background-color: #f1f1f4;
+  }
+  .background{
+    background-image: url(assets/images/bg-sidebar-desktop.svg);
+    border-radius: 10px;
+    background-position: center bottom;
+    height: 100%;
+    width: 30vw;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 2rem 0 0 4rem;
+    gap: 3rem;
+  }
+  .footer{
+    display: none;
+  }
+  .steps{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .stepDetails{
+    display: flex;
+    flex-direction: column;
+  }
+  .stepText{
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    opacity: 0.5;
+  }
+  .stepInfo{
+    font-weight: 600;
+    color: #f3f3f3;
+    font-size: 1.1rem;
+  }
+  #form{
+    position: static;
+    margin: 3rem 0 0 0;
+    min-width: 60vw;
+    padding-right: 20%;
+    background-color: #f1f1f4;
+  }
+  button{
+    align-self: flex-end;
+  }
+  label, .plan{
+    margin: 0.6rem 0;
+  }
+  .thankyou{
+    width: 30vw;
+    padding-top: 5rem;
+    justify-self: center;
+    align-self: center;
+  }
+  .thankyou>h1{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+  }
+ #p2{
+    margin: 0.5rem;
+    text-align: center;
+  }
 }
